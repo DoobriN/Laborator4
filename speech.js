@@ -6,7 +6,7 @@ recognition.lang = |'cn-US';
 
 function on_touch()
 {
-	if(recogntion.start){
+	if(recognition.start){
 		recognition.start();
 		
 		recogntion_started = true;
@@ -17,14 +17,14 @@ function on_touch()
 
 function onend()
 {
-	recogntion.stop();
+	recognition.stop();
 	recognition_started = false;
 }
 
-recogntion.onend = onend;
-recogntion.onsoundend = onend;
-recogntion.onspeechend = onend;
-recogntion.onresult = on_results;
+recognition.onend = onend;
+recognition.onsoundend = onend;
+recognition.onspeechend = onend;
+recognition.onresult = on_results;
 
 function on_results(e)
 {
